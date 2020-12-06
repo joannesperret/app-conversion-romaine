@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title mode="md">
+      Traduction Romaine
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="md">
+  <ion-item>
+    <ion-label position="floating" >Saisissez un chiffre</ion-label>
+    <ion-label position="floating">Romain < IX.MCMXCIX</ion-label>
+    <ion-input type="text" [(ngModel)]="nombreSaisi"></ion-input>
+  </ion-item>  
+  <ion-button expand="block" color="dark"  routerLink="/conversion-romaine"(click)="convertir()"> X --> 10
+    <ion-icon name="calculator" slot="start"></ion-icon>
+  </ion-button>
+  <ion-item>
+    <ion-label position="floating">Resultat</ion-label>
+    <ion-item>{{resultat}}</ion-item>
+  </ion-item>
+</ion-content>
