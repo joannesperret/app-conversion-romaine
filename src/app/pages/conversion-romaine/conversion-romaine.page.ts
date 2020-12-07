@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './conversion-romaine.page.html',
   styleUrls: ['./conversion-romaine.page.scss'],
 })
-export class ConversionRomainePage implements OnInit {
+export class ConversionRomainePage {
 
   constructor() {}
 
@@ -204,10 +204,12 @@ export class ConversionRomainePage implements OnInit {
           this.resultat += (tenRom + unitRom);
       } else if (tenRom === undefined && koRom === undefined) {
           this.resultat += (centRom + unitRom);
-      } else if (koRom === undefined && unitRom === undefined) {
+      } else if (koRom === undefined && tenRom === undefined) {
           this.resultat += (centRom + tenRom);
       } else if (centRom === undefined && unitRom === undefined) {
-          this.resultat += (tenRom + unitRom);
+          this.resultat += (koRom + tenRom);
+        } else if (koRom === undefined && unitRom === undefined) {
+            this.resultat += (centRom + tenRom);
       } else if (unitRom === undefined && tenRom === undefined && koRom === undefined) {
           this.resultat += (centRom);
       } else if (centRom === undefined) {
