@@ -12,7 +12,7 @@
 <ion-content mode="md">
   <ion-item>
     <ion-label position="floating" >Saisissez un chiffre</ion-label>
-    <ion-label position="floating">Romain < IX.MCMXCIX</ion-label>
+    <ion-label position="floating">Romain</ion-label>
     <ion-input type="text" [(ngModel)]="nombreSaisi"></ion-input>
   </ion-item>  
   <ion-button expand="block" color="dark"  routerLink="/traduction-romaine"(click)="convertir()"> X --> 10
@@ -20,6 +20,6 @@
   </ion-button>
   <ion-item>
     <ion-label position="floating">Resultat</ion-label>
-    <ion-item>{{resultat}}</ion-item>
+    <ion-item>{{result}}</ion-item>
   </ion-item>
 </ion-content>
